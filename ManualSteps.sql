@@ -172,6 +172,195 @@ INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
 VALUES(@CatIDGirl, 'Swim', 1, 1, GETDATE())
 
+-----------Men-------------
+-- Insert categories Head = Men , Parent = Accessories
+declare @CatIDMenAccessories as int
+select @CatIDMenAccessories = id
+from Categories
+where id in (select id
+from Categories
+where Name= 'Accessories'
+    -- ParentId=87)
+    and ParentId in (Select Id
+    from Categories
+    where Name='Men')
+)
+
+--select  * from Categories where id in (select id from Categories where Name= 'Accessories' and ParentId=87)
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Belts', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Eyewear', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Gloves', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Hats and Caps', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Scarves', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Suspenders', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Jewellery', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDMenAccessories, 'Watches', 1, 1, GETDATE())
+
+-- Insert categories Head = Men , Parent = Bags
+declare @CatIDBags as int
+select @CatIDBags = id
+from Categories
+where id in (select id
+from Categories
+where Name= 'Bags'
+    -- ParentId=87)
+    and ParentId in (Select Id
+    from Categories
+    where Name='Men')
+)
+
+--select  * from Categories where id in (select id from Categories where Name= 'Bags' and ParentId=87)
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBags, 'Backpacks', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBags, 'Luggage', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBags, 'Wallets', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBags, 'Crossbody Bags', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBags, 'Briefcases', 1, 1, GETDATE())
+
+
+-- Insert categories Head = Men , Parent = Clothing
+declare @Clothing as int
+select @Clothing = id
+from Categories
+where id in (select id
+from Categories
+where Name= 'Clothing'
+    -- and ParentId=87)
+    and ParentId in (Select Id
+    from Categories
+    where Name='Men')
+)
+
+--select  * from Categories where id in (select id from Categories where Name= 'Clothing' and ParentId=87)
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Shirts', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'T-shirts', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Polos', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Pants', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Shorts', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Hoodies & Jackets & Coats', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Blazers & Suits', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Underwear & Loungewear', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Socks', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@Clothing, 'Swimwear', 1, 1, GETDATE())
+
+
+-- Insert categories Head = Men , Parent = Bags
+declare @CatIDBagsMen as int
+select @CatIDBagsMen = id
+from Categories
+where id in (select id
+from Categories
+where Name= 'Shoes'
+    -- and ParentId=87)
+    and ParentId in (Select Id
+    from Categories
+    where Name='Men')
+)
+
+--select  * from Categories where id in (select id from Categories where Name= 'Shoes' and ParentId=87)
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Sport shoes', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Formal Shoes', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Loafers & Boat Shoes', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Sneakers', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Sandals & Flipflops', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Ski & Snow Boots', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@CatIDBagsMen, 'Desert & Hiking Boots', 1, 1, GETDATE())
+
+
+
+
+
+
+
 
 
 

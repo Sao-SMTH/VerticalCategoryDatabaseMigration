@@ -1,6 +1,6 @@
 -- Insert categories Head = Men , Parent = Bags
 declare @CatID as int
-select  @catId = id from Categories where id in (select id from Categories where Name= 'Bags' and 
+select  @catId = id from Categories where id in (select id from Categories where Name= 'Bags' 
 -- ParentId=87)
 and ParentId in (Select Id from Categories where Name='Men')
 )
