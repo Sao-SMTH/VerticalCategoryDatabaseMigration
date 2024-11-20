@@ -173,6 +173,33 @@ INSERT INTO [Categories]
 VALUES(@CatIDGirl, 'Swim', 1, 1, GETDATE())
 
 -----------Men-------------
+
+-- Insert Parent categories Head = Kidswear 
+declare @HeadCatIDMen as int
+select @HeadCatIDMen = id
+from Categories
+where id in (select id
+from Categories
+where Name= 'Men')
+
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@HeadCatIDMen, 'Accessories', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@HeadCatIDMen, 'Bags', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@HeadCatIDMen, 'Clothing', 1, 1, GETDATE())
+
+INSERT INTO [Categories]
+    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
+VALUES(@HeadCatIDMen, 'Shoes', 1, 1, GETDATE())
+
+
 -- Insert categories Head = Men , Parent = Accessories
 declare @CatIDMenAccessories as int
 select @CatIDMenAccessories = id
@@ -324,7 +351,6 @@ where Name= 'Shoes'
     from Categories
     where Name='Men')
 )
-
 --select  * from Categories where id in (select id from Categories where Name= 'Shoes' and ParentId=87)
 
 INSERT INTO [Categories]
