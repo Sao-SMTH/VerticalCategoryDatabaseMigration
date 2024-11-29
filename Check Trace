@@ -4,6 +4,26 @@ where ParentId is null;
 
 Select *
 from Categories
+where ParentId=88;
+
+Select distinct(ParentId)
+from Categories
+where ParentId in 
+(Select Id
+from Categories
+where ParentId is null);
+
+Delete
+from Categories
+where Id not in (77,87,88,89) and ParentId is null
+;
+
+Select *
+from Categories
+where ParentId is null;
+
+Select *
+from Categories
 Where Id in 
 (Select Id
 from Categories
@@ -20,11 +40,6 @@ VALUES
 SET @InsertedId = SCOPE_IDENTITY();
 
 -- Update existing categories to set their ParentId to the inserted ID
-
-INSERT INTO [Categories]
-    ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@InsertedId, 'dresses & One piece', 1, 1, GETDATE())
-
 UPDATE [Categories]
 SET ParentId = @InsertedId
 WHERE Id IN (
