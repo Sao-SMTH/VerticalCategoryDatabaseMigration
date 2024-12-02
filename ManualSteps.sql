@@ -390,3 +390,6 @@ Update Categories set Name='Dresses & One-piece'
 where Name='dresses & One-piece';
 
 Update Categories set Name='Accessories' where Name='Accesories';
+
+Update Categories set Name='Kidswear'
+where Name='Kids';
