@@ -385,3 +385,8 @@ VALUES(@CatIDBagsMen, 'Ski & Snow Boots', 1, 1, GETDATE())
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
 VALUES(@CatIDBagsMen, 'Desert & Hiking Boots', 1, 1, GETDATE())
+
+Update Categories set Name='Dresses & One-piece'
+where Name='dresses & One-piece';
+
+Update Categories set Name='Accessories' where Name='Accesories';
