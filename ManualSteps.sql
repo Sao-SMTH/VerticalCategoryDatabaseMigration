@@ -23,7 +23,7 @@ SET @InsertedId = SCOPE_IDENTITY();
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@InsertedId, 'dresses & One piece', 1, 1, GETDATE())
+VALUES(@InsertedId, 'Dresses & One piece', 1, 1, GETDATE())
 
 UPDATE [Categories]
 SET ParentId = @InsertedId
@@ -97,7 +97,7 @@ VALUES(@catId, 'Bottoms', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@catId, 'One-piece', 1, 1, GETDATE())
+VALUES(@catId, 'Dresses & One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
@@ -132,7 +132,7 @@ VALUES(@CatIDBoys, 'Bottoms', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@CatIDBoys, 'One-piece', 1, 1, GETDATE())
+VALUES(@CatIDBoys, 'Dresses & One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
@@ -167,7 +167,7 @@ VALUES(@CatIDGirl, 'Bottoms', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@CatIDGirl, 'One-piece', 1, 1, GETDATE())
+VALUES(@CatIDGirl, 'Dresses & One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
@@ -387,7 +387,7 @@ INSERT INTO [Categories]
 VALUES(@CatIDBagsMen, 'Desert & Hiking Boots', 1, 1, GETDATE())
 
 Update Categories set Name='Dresses & One-piece'
-where Name='dresses & One-piece';
+where Name='dresses & Dresses & One-piece';
 
 Update Categories set Name='Accessories' where Name='Accesories';
 

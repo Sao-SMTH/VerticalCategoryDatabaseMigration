@@ -23,7 +23,7 @@ VALUES(@catId, 'Bottoms', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@catId, 'One-piece', 1, 1, GETDATE())
+VALUES(@catId, 'Dresses & One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
