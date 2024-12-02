@@ -101,7 +101,7 @@ VALUES(@catId, 'One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@catId, 'Accesories', 1, 1, GETDATE())
+VALUES(@catId, 'Accessories', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
@@ -136,7 +136,7 @@ VALUES(@CatIDBoys, 'One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@CatIDBoys, 'Accesories', 1, 1, GETDATE())
+VALUES(@CatIDBoys, 'Accessories', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
@@ -171,7 +171,7 @@ VALUES(@CatIDGirl, 'One-piece', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
-VALUES(@CatIDGirl, 'Accesories', 1, 1, GETDATE())
+VALUES(@CatIDGirl, 'Accessories', 1, 1, GETDATE())
 
 INSERT INTO [Categories]
     ([ParentId],[Name],[Published],[DisplayOrder],[CreationTime])
