@@ -84,3 +84,35 @@ where ParentId in (
     from Categories
     where Name='Kidswear') 
 ) and Name='Swim';
+
+UPDATE Categories Set VirtualPath='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/Accessories.webp',
+VirtualPathThumbnail='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/Accessories.webp'
+where ParentId in 
+(Select Id
+    from Categories
+    where Name='Women')
+    and Name='Accessories';
+
+UPDATE Categories Set VirtualPath='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/ACTIVEWEAR.webp',
+VirtualPathThumbnail='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/ACTIVEWEAR.webp'
+where ParentId in 
+(Select Id
+    from Categories
+    where Name='Women')
+    and Name='Activewear';
+
+UPDATE Categories Set VirtualPath='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/jewellery.webp',
+VirtualPathThumbnail='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/jewellery.webp'
+where ParentId in 
+(Select Id
+    from Categories
+    where Name='Women')
+    and Name='Jewellery';
+
+UPDATE Categories Set VirtualPath='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/women.webp',
+VirtualPathThumbnail='https://s3.ap-southeast-1.amazonaws.com/smthgoodcategory/women.webp'
+where ParentId in 
+(Select Id
+    from Categories
+    where Name='Women')
+    and Name='Clothing';
